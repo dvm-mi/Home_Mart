@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "430272110891",
+    "project_id": "home-mart-4567a",
+    "storage_bucket": "home-mart-4567a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430272110891:android:949eef0ef4758bbc51a56e",
+        "android_client_info": {
+          "package_name": "com.example.homemart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430272110891-do5bam5oj7pnslcjgd5a6j9hqhna6g94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.homemart",
+            "certificate_hash": "8046f69df022aeaf9a182b1996ec55633c0760c3"
+          }
+        },
+        {
+          "client_id": "430272110891-g54unq38ar9gcsubjg3bb2mi977v5vjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCheq7K889SpOMBwmfxU9tFmdhJsyLEoYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430272110891-g54unq38ar9gcsubjg3bb2mi977v5vjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
