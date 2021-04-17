@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Home Mart</string>
+
+    <string-array name="users">
+        <item> Customer  </item>
+        <item> Retailer </item>
+        <item> WholeSalers  </item>
+    </string-array>
+
+
 </resources>
