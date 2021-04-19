@@ -9,71 +9,60 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/login_app_logo"
+        android:id="@+id/login_page_logo"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="90dp"
         android:src="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/login_phone_email_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/login_app_logo"
-        android:background="@drawable/input_design"
-        android:padding="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="80dp"
-        android:hint="Phone Number / E-mail"
-        android:inputType="number"
-        android:textColor="@color/white"
-        android:textColorHint="@android:color/black"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        android:textAlignment="center"/>
 
-    <Button
-        android:id="@+id/login_otp_btn"
+    <EditText
+        android:id="@+id/idEdtPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_phone_email_input"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginRight="130dp"
-        android:background="@drawable/buttons"
-        android:padding="10dp"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:text="Get OTP"
-        android:textColor="@color/white"
-        />
-
-    <TextView
-        android:id="@+id/login_otp_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/login_otp_btn"
+        android:layout_below="@id/login_page_logo"
         android:background="@drawable/input_design"
         android:padding="20dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"
-        android:layout_marginTop="40dp"
-        android:hint="Enter OTP"
+        android:layout_marginTop="80dp"
+        android:hint="Phone Number"
         android:inputType="number"
         android:textColor="@color/white"
         android:textColorHint="@android:color/black"
         android:textSize="17sp"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:gravity="center_horizontal"/>
 
-    <Button
-        android:id="@+id/login_login_btn"
+
+
+    <EditText
+        android:id="@+id/idEdtpass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_otp_input"
-        android:layout_marginTop="70dp"
+        android:layout_below="@id/idEdtPhoneNumber"
+        android:background="@drawable/input_design"
+        android:padding="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/idBtnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idEdtpass"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="130dp"
         android:layout_marginRight="130dp"
         android:background="@drawable/buttons"
@@ -84,18 +73,16 @@
         android:textColor="@color/white"
         />
 
-    <CheckBox
-        android:id="@+id/checkBox_remember"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Remember Me"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_below="@+id/login_otp_input"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="70dp"
-        />
-
-
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@+id/idBtnVerify"
+        android:layout_marginTop="40dp"
+        android:padding="15dp"
+        android:textAllCaps="false"
+        android:text="SignIn with Google Account"/>
 
 </RelativeLayout>
