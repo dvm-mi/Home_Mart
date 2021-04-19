@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryList"
+    tools:ignore="ExtraText">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    <TextView
+
+
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+            android:text="Select Your Product"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textStyle="bold">
+
+        </TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="200dp"
+        android:text="Potato"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal">
+    </TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="150dp"
+        android:text="10/kg"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal">
+
+
+
+    </TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="200dp"
+        android:text="Available"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_shadow_start_color"
+        android:gravity="center_horizontal">
+
+    </TextView>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/pot">
+
+        </ImageView>
+
+    <Button
+        android:id="@+id/buttonpotato"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="200dp"
+        android:text="Buy Now"
+        android:textSize="25sp"
+        >
+
+    </Button>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="300dp"
+        android:src="@drawable/tomato">
+
+    </ImageView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="200dp"
+        android:text="Tomato"
+        android:textSize="30sp"
+        android:gravity="center">
+
+    </TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="200dp"
+        android:text="12/kg"
+        android:textSize="30sp"
+        android:gravity="center">
+
+    </TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="400sp"
+        android:text="Out of Stock"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500">
+
+    </TextView>
+    <Button
+        android:id="@+id/buttont"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="200dp"
+        android:text="Notify Me"
+        android:textSize="20sp">
+
+    </Button>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="500dp"
+        android:src="@drawable/onion">
+    </ImageView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="200dp"
+        android:text="onion"
+        android:textSize="35dp"
+        android:gravity="center"
+       >
+
+    </TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="550dp"
+        android:text="25/kg"
+        android:textSize="35sp"
+        android:gravity="center"
+
+        >
+
+    </TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="200dp"
+        android:text="Available"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_shadow_start_color"
+        android:gravity="center_horizontal">
+        >
+
+    </TextView>
+
+    <Button
+        android:id="@+id/buttononion"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="200dp"
+        android:text="Buy Now"
+        android:textSize="25sp"
+        >
+
+    </Button>
+
+
+
+</RelativeLayout>
