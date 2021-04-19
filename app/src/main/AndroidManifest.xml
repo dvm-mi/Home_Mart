@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeMart">
+        <activity android:name=".SellerDetail"></activity>
+        <activity android:name=".CategoryProductlList" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".CategoryList">
         <activity android:name=".DashboardActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />

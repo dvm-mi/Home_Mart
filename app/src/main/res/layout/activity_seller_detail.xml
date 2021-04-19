@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellerDetail">
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:text="Select Seller"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:inputType="number"
+        android:text="Enter Your Quantity"
+        android:textSize="40sp"
+        android:textStyle="">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="400sp"
+        android:layout_height="200sp"
+        android:layout_marginTop="150dp">
+
+    </TextView>
+
+</RelativeLayout>
