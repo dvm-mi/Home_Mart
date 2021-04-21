@@ -13,9 +13,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.homemart.model.Users;
+import com.example.homemart.prevalent.Prevalent;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -46,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText phonenologin, passlogin;
     private ProgressDialog loadingbar;
     private String parentDbName= "Users";
+    private TextView RetailerLink, CustomerLink;
 
 
     @Override
@@ -56,7 +59,30 @@ public class LoginActivity extends AppCompatActivity {
         Loginbtn = (Button) findViewById(R.id.idBtnVerify);
         phonenologin = (EditText) findViewById(R.id.idEdtPhoneNumber);
         passlogin = (EditText) findViewById(R.id.idEdtpass);
+        RetailerLink= (TextView) findViewById(R.id.retailer_panel_link);
+        CustomerLink= (TextView) findViewById(R.id.customer_panel_link);
+
         loadingbar = new ProgressDialog(this);
+
+        RetailerLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Loginbtn.setText("Retailer Login");
+                RetailerLink.setVisibility(View.INVISIBLE);
+                CustomerLink.setVisibility(View.VISIBLE);
+                parentDbName = "Retailers";
+            }
+        });
+
+        CustomerLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Loginbtn.setText("LogIn");
+                RetailerLink.setVisibility(View.VISIBLE);
+                CustomerLink.setVisibility(View.INVISIBLE);
+                parentDbName = "Users";
+            }
+        });
 
         Loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,10 +142,19 @@ public class LoginActivity extends AppCompatActivity {
 
                       if(usersData.getPhone().equals(phone)){
                           if(usersData.getPassword().equals(password)){
-                              Toast.makeText(LoginActivity.this, "Logged in Successfully..", Toast.LENGTH_SHORT).show();
-                              loadingbar.dismiss();
-                              Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-                              startActivity (intent);
+                            if (parentDbName.equals("Retailers")){
+                                Toast.makeText(LoginActivity.this, "Logged in Successfully..", Toast.LENGTH_SHORT).show();
+                                loadingbar.dismiss();
+                                Intent intent = new Intent(LoginActivity.this, RetailerCategoryActivity.class);
+                                startActivity (intent);
+                            }
+                            else if (parentDbName.equals("Users")){
+                                Toast.makeText(LoginActivity.this, "Logged in Successfully..", Toast.LENGTH_SHORT).show();
+                                loadingbar.dismiss();
+                                Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                                Prevalent.currentOnlineUsers = usersData;
+                                startActivity (intent);
+                            }
                           }
                           else{
                               loadingbar.dismiss();

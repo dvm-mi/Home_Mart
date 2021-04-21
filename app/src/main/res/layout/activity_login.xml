@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login3"
+    android:background="@drawable/dashboard_1"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -62,9 +62,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/idEdtpass"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginRight="130dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         android:background="@drawable/buttons"
         android:padding="10dp"
         android:textAllCaps="false"
@@ -72,6 +72,38 @@
         android:text="LogIn"
         android:textColor="@color/white"
         />
+
+    <TextView
+        android:id="@+id/retailer_panel_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idEdtpass"
+        android:layout_marginTop="20dp"
+        android:text="I'm a Retailer?"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="70dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/customer_panel_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idEdtpass"
+        android:layout_marginTop="20dp"
+        android:text="I'm a Customer?"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="70dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        />
+
+
+
 
     <Button
         android:id="@+id/sign_in_button"
