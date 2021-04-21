@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RetailerCategoryActivity">
+
+    <Button
+        android:id="@+id/logout_retailer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Logout"
+        android:layout_marginRight="10dp"/>
+
+
+    <TextView
+        android:id="@+id/slogan_retailer_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="Add new Product"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear1_retailer_cat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/slogan_retailer_cat"
+        android:layout_marginTop="80dp">
+
+        <ImageView
+            android:id="@+id/ret_cat_fruits"
+            android:layout_width="100dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="100dp"
+            android:src="@drawable/retailer_cat_fruits"/>
+
+        <ImageView
+            android:id="@+id/ret_cat_vegetables"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/retailer_cat_veget"/>
+
+        <ImageView
+            android:id="@+id/ret_cat_breads"
+            android:layout_width="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="100dp"
+            android:src="@drawable/retailer_cat_breads"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2_retailer_cat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/linear1_retailer_cat_layout"
+        android:layout_marginTop="80dp">
+
+        <ImageView
+            android:id="@+id/ret_cat_juice"
+            android:layout_width="100dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="100dp"
+            android:src="@drawable/retailer_cat_juices"/>
+
+        <ImageView
+            android:id="@+id/ret_cat_snacks"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/retailer_cat_drinks"/>
+
+        <ImageView
+            android:id="@+id/ret_cat_meat"
+            android:layout_width="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="100dp"
+            android:src="@drawable/retailer_cat_meat"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3_retailer_cat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/linear2_retailer_cat_layout"
+        android:layout_marginTop="70dp">
+
+    <ImageView
+        android:id="@+id/ret_cat_perscare"
+        android:layout_width="100dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pc"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

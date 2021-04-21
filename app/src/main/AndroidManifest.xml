@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeMart">
-        <activity android:name=".SellerDetail"></activity>
+        <activity
+            android:name=".DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/Theme.HomeMart.NoActionBar">
+        </activity>
+        <activity android:name=".RetAddNewProductActivity" />
+        <activity android:name=".RetailerCategoryActivity" />
+        <activity android:name=".SellerDetail" />
         <activity android:name=".CategoryProductlList" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".CategoryList">
-        <activity android:name=".DashboardActivity" />
+        <activity android:name=".CategoryList" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
