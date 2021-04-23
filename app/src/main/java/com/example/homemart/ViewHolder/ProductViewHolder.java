@@ -13,6 +13,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder implements View.O
 {
     public TextView txtProductName, txtProductDescription, txtProductPrice;
     public ImageView imageView;
+
     public ItemClickListner listner;
 
 
