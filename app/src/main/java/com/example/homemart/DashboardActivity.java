@@ -35,6 +35,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import io.paperdb.Paper;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -60,8 +61,8 @@ public class DashboardActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(DashboardActivity.this, CartActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -120,6 +121,15 @@ public class DashboardActivity extends AppCompatActivity {
                             holder.txtProductDescription.setText(model.getDescription());
                             holder.txtProductPrice.setText("Price = Rs." + model.getPrice() );
                             Picasso.get().load(model.getImage()).into(holder.imageView);
+
+                            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent intent = new Intent(DashboardActivity.this, ProductDetailsActivity.class);
+                                    intent.putExtra("pid", model.getPid());
+                                    startActivity(intent);
+                                }
+                            });
                         }
 
                         @NonNull
@@ -174,15 +184,21 @@ public class DashboardActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.nav_cart) {
+            Intent intent = new Intent(DashboardActivity.this, CartActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_orders) {
 
-        } else if (id == R.id.nav_orders) {
+        }
+        else if (id == R.id.nav_category) {
 
-        } else if (id == R.id.nav_category) {
+        }
+        else if (id == R.id.nav_settings) {
+            Intent intent = new Intent(DashboardActivity.this, SettingsActivity.class);
+            startActivity (intent);
 
-        } else if (id == R.id.nav_settings) {
-
-
-        } else if (id == R.id.nav_logout) {
+        }
+        else if (id == R.id.nav_logout) {
 
             Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

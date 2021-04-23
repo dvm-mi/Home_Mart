@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -37,6 +38,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import io.paperdb.Paper;
+
 public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 101 ;
     Spinner spinner;
@@ -49,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog loadingbar;
     private String parentDbName= "Users";
     private TextView RetailerLink, CustomerLink;
+
 
 
     @Override
@@ -131,6 +135,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void AllowAccesstoAccount(String phone, String password) {
+
+
         final DatabaseReference Rootref;
         Rootref = FirebaseDatabase.getInstance().getReference();
 

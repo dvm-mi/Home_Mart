@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.homemart">
 
     <application
@@ -8,12 +9,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HomeMart">
+        android:theme="@style/Theme.HomeMart"
+        tools:replace="android:theme">
+        <activity android:name=".ConfirmFinalOrderActivity"></activity>
+        <activity android:name=".CartActivity" />
+        <activity android:name=".ProductDetailsActivity" />
+        <activity android:name=".SettingsActivity" />
         <activity
             android:name=".DashboardActivity"
             android:label="@string/title_activity_dashboard"
-            android:theme="@style/Theme.HomeMart.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.HomeMart.NoActionBar" />
         <activity android:name=".RetAddNewProductActivity" />
         <activity android:name=".RetailerCategoryActivity" />
         <activity android:name=".SellerDetail" />

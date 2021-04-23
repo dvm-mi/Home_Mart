@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/idEdtpass"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
         android:background="@drawable/buttons"
@@ -102,7 +102,21 @@
         android:visibility="invisible"
         />
 
-
+    <com.rey.material.widget.CheckBox
+        android:id="@+id/remember_me_chkb"
+        style="@style/Material.Drawable.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@+id/customer_panel_link"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:text="Remember Me"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:cbd_strokeColor="@color/purple_200"
+        android:gravity="center_vertical"/>
 
 
     <Button
