@@ -44,10 +44,20 @@ public class DashboardActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
+    private String type = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        Intent intent = getIntent();
+        Bundle bundle =intent.getExtras();
+        if (bundle != null){
+            type = getIntent().getExtras().get("Retailer").toString();
+        }
+
+
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
@@ -61,8 +71,11 @@ public class DashboardActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DashboardActivity.this, CartActivity.class);
-                startActivity(intent);
+
+                if (!type.equals("Retailer")){
+                    Intent intent = new Intent(DashboardActivity.this, CartActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -81,7 +94,9 @@ public class DashboardActivity extends AppCompatActivity {
         TextView userNameTextView = headerView.findViewById(R.id.user_profile_name);
         CircleImageView profileImageView = headerView.findViewById(R.id.user_profile_image);
 
-        userNameTextView.setText(Prevalent.currentOnlineUsers.getUsername());
+       if (!type.equals("Retailer")){
+           userNameTextView.setText(Prevalent.currentOnlineUsers.getUsername());
+       }
 //        Picasso.get().load(Prevalent.currentOnlineUsers.getImage()).placeholder(R.drawable.profile).into(profileImageView);
 //
 //
@@ -125,9 +140,21 @@ public class DashboardActivity extends AppCompatActivity {
                             holder.itemView.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    Intent intent = new Intent(DashboardActivity.this, ProductDetailsActivity.class);
-                                    intent.putExtra("pid", model.getPid());
-                                    startActivity(intent);
+
+                                    if (type.equals("Retailer")){
+                                        Intent intent = new Intent(DashboardActivity.this, RetailerMaintainProductsActivity.class);
+                                        intent.putExtra("pid", model.getPid());
+                                        startActivity(intent);
+
+                                    }
+                                    else {
+
+                                        Intent intent = new Intent(DashboardActivity.this, ProductDetailsActivity.class);
+                                        intent.putExtra("pid", model.getPid());
+                                        startActivity(intent);
+
+                                    }
+
                                 }
                             });
                         }
@@ -184,26 +211,39 @@ public class DashboardActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.nav_cart) {
-            Intent intent = new Intent(DashboardActivity.this, CartActivity.class);
-            startActivity(intent);
+
+            if (!type.equals("Retailer")){
+                Intent intent = new Intent(DashboardActivity.this, CartActivity.class);
+                startActivity(intent);
+            }
         }
-        else if (id == R.id.nav_orders) {
+        else if (id == R.id.nav_search) {
+            if (!type.equals("Retailer")){
+                Intent intent = new Intent(DashboardActivity.this, SearchProductsActivity.class);
+                startActivity(intent);
+            }
 
         }
         else if (id == R.id.nav_category) {
-
+            if (!type.equals("Retailer")){
+                Intent intent = new Intent(DashboardActivity.this, CategoryList.class);
+                startActivity (intent);
+            }
         }
         else if (id == R.id.nav_settings) {
-            Intent intent = new Intent(DashboardActivity.this, SettingsActivity.class);
-            startActivity (intent);
+            if (!type.equals("Retailer")){
+                Intent intent = new Intent(DashboardActivity.this, SettingsActivity.class);
+                startActivity (intent);
+            }
 
         }
         else if (id == R.id.nav_logout) {
-
-            Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
+            if (!type.equals("Retailer")){
+                Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -11,7 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeMart"
         tools:replace="android:theme">
-        <activity android:name=".ConfirmFinalOrderActivity"></activity>
+        <activity android:name=".SearchProductsActivity"></activity>
+        <activity
+            android:name=".ui.login.SearchProductsActivity"
+            android:label="@string/title_activity_search_products"></activity>
+        <activity android:name=".RetailerMaintainProductsActivity" />
+        <activity android:name=".RetailerUserProducts" />
+        <activity android:name=".RetailerNewOrdersActivity" />
+        <activity android:name=".ConfirmFinalOrderActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".ProductDetailsActivity" />
         <activity android:name=".SettingsActivity" />

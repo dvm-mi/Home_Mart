@@ -16,6 +16,8 @@ public class RetailerCategoryActivity extends AppCompatActivity {
     private ImageView Juices, Snacks, Meat;
     private ImageView PersonalCare;
 
+    private  Button CheckOrdersBtn, maintainProductsBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,14 +31,37 @@ public class RetailerCategoryActivity extends AppCompatActivity {
         Meat = (ImageView) findViewById(R.id.ret_cat_meat);
         PersonalCare = (ImageView) findViewById(R.id.ret_cat_perscare);
 
-        LogoutRetailBtn = findViewById(R.id.logout_retailer_btn);
+        LogoutRetailBtn = (Button) findViewById(R.id.logout_retailer_btn);
         LogoutRetailBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RetailerCategoryActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity (intent);
+                finish();
+            }
+        });
+
+        CheckOrdersBtn= (Button) findViewById(R.id.check_orders_btn) ;
+        CheckOrdersBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RetailerCategoryActivity.this, RetailerNewOrdersActivity.class);
                 startActivity (intent);
             }
         });
+
+        maintainProductsBtn= (Button) findViewById(R.id.maintain_products_btn) ;
+        maintainProductsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RetailerCategoryActivity.this, DashboardActivity.class);
+                intent.putExtra("Retailer","Retailer");
+                startActivity (intent);
+            }
+        });
+
+
 
         Fruits.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -13,6 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="27dp"
         android:text="Select Category"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="27sp"
         android:textStyle="bold"
