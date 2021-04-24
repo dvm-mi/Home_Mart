@@ -19,7 +19,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/input_design"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="5dp"
         android:padding="20dp"
         android:textColor="@color/purple_200"/>
 
@@ -93,6 +93,23 @@
         android:layout_marginRight="20dp"
         android:hint="Pincode"/>
 
+    <com.rey.material.widget.CheckBox
+        android:id="@+id/payment_options"
+        style="@style/Material.Drawable.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@+id/shipment_pincode"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Pay on Delivery"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:cbd_strokeColor="@color/purple_200"
+        android:gravity="center_vertical"/>
+
     <Button
         android:id="@+id/confirm_final_order_btn"
         android:layout_width="match_parent"
@@ -102,7 +119,7 @@
         android:background="@drawable/buttons"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="60dp"
         android:textSize="20sp"
         android:textAllCaps="false"
         android:textAlignment="center"

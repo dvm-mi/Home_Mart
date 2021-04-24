@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="25dp"
-        android:background="@android:color/holo_green_light">
+        android:background="@color/purple_200">
 
         <TextView
             android:id="@+id/cart_product_name"
